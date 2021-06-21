@@ -1,9 +1,11 @@
 import React from "react";
 
 class Footers extends React.Component {
+ 
   render(){
       return(
-           <h1>Hello In Footers</h1>
+        
+           <h1>&copy;2021</h1>
       )
   }
 }
