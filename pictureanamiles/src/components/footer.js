@@ -4,7 +4,6 @@ class Footers extends React.Component {
  
   render(){
       return(
-        
            <h1>&copy;2021</h1>
       )
   }
