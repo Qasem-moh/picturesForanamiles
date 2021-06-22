@@ -38,7 +38,7 @@
 }
 
 
-img{
+/* img{
   cursor: pointer;
   width: 350px;
   height: 350px;
@@ -55,4 +55,3 @@ img{
 h2{
   text-decoration: underline;
   /* border-bottom: 0.25px dashed; */
-}
