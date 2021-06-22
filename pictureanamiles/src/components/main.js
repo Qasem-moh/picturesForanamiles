@@ -2,11 +2,12 @@ import React from "react";
 import data from "./data.json";
 import SelectedBeast from "../SelectedBeast";
 import "../App.css";
+import { Row } from "react-bootstrap";
 
 class Mains extends React.Component {
     render() {
         return (
-            <div>
+            <Row>
                 {data.map((beast, index) => {
                     return (
                         <SelectedBeast
@@ -18,7 +19,7 @@ class Mains extends React.Component {
                         />
                     );
                 })}
-            </div>
+            </Row>
         );
     }
 }
