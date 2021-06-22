@@ -8,9 +8,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Headers counter={0} />
+        <Headers />
         <Mains />
-        <Footers />
+        <Footers/>
       </div>
     );
   }

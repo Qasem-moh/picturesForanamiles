@@ -13,9 +13,11 @@ class Mains extends React.Component {
         <p>{this.props.kWord}</p>
         <p>{this.props.horns}</p> */}
 
-        {data.map((beast) => {
+        {data.map((beast, index) => {
           return (
             <Bease
+              key={index}
+              clicks={0}
               title={beast.title} //array[i].title
               image_url={beast.image_url}
               description={beast.description}
