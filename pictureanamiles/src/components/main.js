@@ -17,8 +17,8 @@ class Mains extends React.Component {
           return (
             <Bease
               key={index}
-              clicks={0}
-              title={beast.title} //array[i].title
+              clicked={0}
+              title={beast.title}
               image_url={beast.image_url}
               description={beast.description}
             />
