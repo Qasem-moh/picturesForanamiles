@@ -4,7 +4,7 @@ class Headers extends React.Component {
   render() {
     return (
       <div>
-        <h1>Welcome in My App</h1>
+        <h1>Horned Best Gallary</h1>
       </div>
     );
   }
