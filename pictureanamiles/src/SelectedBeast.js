@@ -30,13 +30,7 @@ class SelectedBeast extends Component {
                     </Card.Body>
                 </Card>
             </Col>
-            // <div id="divToRender">
-            //     <h2>{this.props.title}</h2>
-            //     <img src={this.props.image_url} alt={this.props.title} onClick={this.dialogImg} />
-            //     <p>{this.props.description}</p>
-            //     <button onClick={this.changeclicked}>click</button>
-            //     <h6>{this.state.clicked}</h6>
-            // </div>
+            
         );
     }
 }
