@@ -1,6 +1,20 @@
 import React from 'react';
 import HornedBeast from '../HornedBeast'
-// import hornsAnimalData from './hornsAnimalData.json'
+
+import { Row } from 'react-bootstrap'
+
+
+class Mains extends React.Component {
+
+
+
+    render() {
+        return (
+
+            <Row>
+                {
+                    this.props.data.map((item, index) => {
+
 import {  Row } from 'react-bootstrap'
 
 
@@ -28,12 +42,12 @@ class Main extends React.Component {
                     })
                 }
             </Row>
-            //         </Card>
-            //   </CardGroup>
-            // </Container>
+
+
+
         )
     }
 
 }
+export default Mains;
 
-export default Main;

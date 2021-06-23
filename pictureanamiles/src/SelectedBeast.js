@@ -11,7 +11,9 @@ export class SelectedBeast extends Component {
                     </Modal.Header>
                     <Modal.Body>
 
+
                         <Card style={{ width: "80%", height: "100%", marginLeft: "7vh" }} bg={'red'}>
+
                             <Card.Img width={200}
                                 height={280} src={this.props.modaldata.img_url} alt={this.props.title} />
                             <Card.Body>
