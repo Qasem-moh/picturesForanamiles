@@ -40,8 +40,8 @@ class HornedBeast extends React.Component {
                         </Card.Text>
                     </Card.Body>
 
-                    <Button style={{ width: "50%", marginLeft: "10vh" }} variant="info" onClick={this.ChangeClick}> 👍 {this.state.clicked}</Button>
-                    <Button style={{ width: "50%", marginTop: "2vh", marginBottom: '2vh', marginLeft: "10vh" }} variant="danger" onClick={this.ShowMe}> Show Me </Button>
+                    <Button style={{ width: "50%", marginLeft: "10vh" }} variant="secondary" onClick={this.ChangeClick}> 👍 {this.state.clicked}</Button>
+                    <Button style={{ width: "50%", marginTop: "2vh", marginBottom: '2vh', marginLeft: "10vh" }} variant="success" onClick={this.ShowMe}> Show Me </Button>
 
 
                 </Card>
