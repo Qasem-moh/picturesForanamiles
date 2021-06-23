@@ -1,12 +1,10 @@
-import React from "react";
-import Headers from "./components/header";
-import Mains from "./components/main";
-import Footers from "./components/footer";
+import React from 'react';
 import hornsAnimalData from './components/hornsAnimalData.json'
 import SelectedBeast from './SelectedBeast'
-// import data from "./components/data.json";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import "./App.css";
+
+import Headers from './components/header';
+import Mains from './components/main';
+import Footers from './components/footer';
 
 class App extends React.Component {
 
@@ -41,3 +39,4 @@ class App extends React.Component {
   }
 }
 export default App;
+

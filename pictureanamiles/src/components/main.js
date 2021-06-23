@@ -1,30 +1,39 @@
-import React from "react";
-// import data from "./data.json";
-import SelectedBeast from "../SelectedBeast";
+import React from 'react';
+import HornedBeast from '../HornedBeast'
 // import hornsAnimalData from './hornsAnimalData.json'
+import {  Row } from 'react-bootstrap'
 
-import "../App.css";
-import { Row } from "react-bootstrap";
 
-class Mains extends React.Component {
+class Main extends React.Component {
+
+
+
     render() {
         return (
+          
             <Row>
-                {this.props.data.map((beast, index) => {
-                    return (
-                        <SelectedBeast
-                            key={index}
-                            clicked={0}
-                            title={beast.title}
-                            image_url={beast.image_url}
-                            description={beast.description}
-                            modal={this.props.selectedmodal}
+                {
+                    this.props.data.map((item, index)=> {
+                        return (
+                            <HornedBeast
+                                key={index}
+                                clicked={0}
+                                title={item.title}
+                                img_url={item.image_url}
+                                description={item.description}
+                                modal={this.props.selectedmodal}
 
-                        />
-                    );
-                })}
+                            />
+                        )
+                    })
+                }
             </Row>
-        );
+            //         </Card>
+            //   </CardGroup>
+            // </Container>
+        )
     }
+
 }
-export default Mains;
+
+export default Main;
