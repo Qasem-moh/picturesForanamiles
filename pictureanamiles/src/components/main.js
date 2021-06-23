@@ -1,6 +1,5 @@
 import React from 'react';
 import HornedBeast from '../HornedBeast'
-
 import { Row } from 'react-bootstrap'
 
 
@@ -14,20 +13,6 @@ class Mains extends React.Component {
             <Row>
                 {
                     this.props.data.map((item, index) => {
-
-import {  Row } from 'react-bootstrap'
-
-
-class Main extends React.Component {
-
-
-
-    render() {
-        return (
-          
-            <Row>
-                {
-                    this.props.data.map((item, index)=> {
                         return (
                             <HornedBeast
                                 key={index}
@@ -36,18 +21,15 @@ class Main extends React.Component {
                                 img_url={item.image_url}
                                 description={item.description}
                                 modal={this.props.selectedmodal}
-
                             />
                         )
                     })
                 }
             </Row>
 
-
-
         )
     }
 
 }
-export default Mains;
 
+export default Mains;

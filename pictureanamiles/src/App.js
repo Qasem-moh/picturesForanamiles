@@ -1,9 +1,7 @@
-
 import React from 'react';
-import hornsAnimalData from './components/hornsAnimalData.json'
-
+import hornsAnimalData from './hornsAnimalData.json'
 import SelectedBeast from './SelectedBeast'
-
+import Filter from './Filter'
 import Headers from './components/header';
 import Mains from './components/main';
 import Footers from './components/footer';
@@ -13,35 +11,42 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hornsData: hornsAnimalData,
+      HornsData: hornsAnimalData,
+      hornsFiltredArr: hornsAnimalData,
       show: false,
-      modaldata: {},
+      ModalData: {},
     }
   }
-  handleshow = (data) => {
+  HandleShowImg = (data) => {
     this.setState({
-      show: true,
-      modaldata: data,
+      Show: true,
+      ModalData: data,
     })
   }
-  handleclose = () => {
+  HandleCloseImg = () => {
     this.setState({
-      show: false,
+      Show: false,
     })
+
+  }
+
+  updateData = (value) => {
+    this.setState({ hornsFiltredArr: value })
   }
   render() {
     return (
       <div style={{ background: 'lightwhite' }}>
         <Headers />
+        <Filter
+          filterData={this.updateData}
+          HornsData={this.state.HornsData}
 
-        <Mains selectedmodal={this.handleshow} data={this.state.hornsData} />
-
-        <SelectedBeast handleExit={this.handleclose} showdata={this.state.show} modaldata={this.state.modaldata} />
+        />
+        <Mains selectedmodal={this.HandleShowImg} data={this.state.hornsFiltredArr} updateData={this.updateData} />
+        <SelectedBeast handleExit={this.HandleCloseImg} ShowData={this.state.Show} ModalData={this.state.ModalData} />
         <Footers />
       </div>
     )
   }
 }
-
 export default App;
-
