@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button, Col } from 'react-bootstrap'
 
 class SelectedBeast extends Component {
@@ -15,28 +17,36 @@ class SelectedBeast extends Component {
         });
     };
 
+
+
+
+
+    clickme = () => {
+        this.props.modal({
+            title: this.props.title,
+            image_url: this.props.image_url,
+            description: this.props.description
+        })
+    }
     render() {
         // console.log(this.state);
         return (
-            <Col class="col-sm">
-                <Card style={{ width: '18rem' }} bg={'dark'} text={'white'}>
-                    <Card.Img variant="top" src={this.props.image_url} />
+
+
+            <Col xs={12} md={6} sm={9} xl={4} style={{ paddingTop: "10vh", paddingLeft: "10vh" }} >
+                <Card style={{ width: "80%", height: "100%" }} bg={'pink'}>
+                    <Card.Img width={200}
+                        height={280} onClick={this.changeclicked} variant="top" src={this.props.image_url} alt={this.props.title} />
                     <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Title style={{ alignItems: 'center' }} >{this.props.title}</Card.Title>
                         <Card.Text>
                             {this.props.description}
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
+                    <Button style={{ width: "50%", marginLeft: "10vh" }} variant="secondary" onClick={this.changeclicked}> 👍{this.state.clicked}</Button>
+                    <Button style={{ width: "50%", marginTop: "2vh", marginBottom: '2vh', marginLeft: "10vh" }} variant="danger" onClick={this.clickme}> Show Img </Button>
                 </Card>
             </Col>
-            // <div id="divToRender">
-            //     <h2>{this.props.title}</h2>
-            //     <img src={this.props.image_url} alt={this.props.title} onClick={this.dialogImg} />
-            //     <p>{this.props.description}</p>
-            //     <button onClick={this.changeclicked}>click</button>
-            //     <h6>{this.state.clicked}</h6>
-            // </div>
         );
     }
 }
