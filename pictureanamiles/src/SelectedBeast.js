@@ -1,38 +1,41 @@
-import React, { Component } from "react";
-import { Card, Button, Col } from 'react-bootstrap'
+import React, { Component } from 'react'
+import { Card, Modal, Button } from 'react-bootstrap'
 
-class SelectedBeast extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            clicked: props.clicked,
-        };
-    }
-
-    changeclicked = () => {
-        this.setState({
-            clicked: this.state.clicked + 1,
-        });
-    };
-
+export class SelectedBeast extends Component {
     render() {
-        // console.log(this.state);
         return (
-            <Col class="col-sm">
-                <Card style={{ width: '18rem' }} bg={'dark'} text={'white'}>
-                    <Card.Img variant="top" src={this.props.image_url} />
-                    <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Text>
-                            {this.props.description}
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
-            </Col>
-            
-        );
+            <>
+                <Modal show={this.props.showdata}  >
+                    <Modal.Header>
+                        <Modal.Title style={{ alignItems: 'center' }}>{this.props.modaldata.title}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+
+                        <Card style={{ width: "80%", height: "100%", marginLeft: "7vh" }} bg={'pink'}>
+                            <Card.Img width={200}
+                                height={280} src={this.props.modaldata.img_url} alt={this.props.title} />
+                            <Card.Body>
+
+                                <Card.Text>
+                                    {this.props.modaldata.description}
+                                </Card.Text>
+                            </Card.Body>
+
+
+
+
+                        </Card>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={this.props.handleExit}>
+                            Close
+                        </Button>
+
+                    </Modal.Footer>
+                </Modal>
+            </>
+        )
     }
 }
 
-export default SelectedBeast;
+export default SelectedBeast
