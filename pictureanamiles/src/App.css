@@ -37,21 +37,17 @@
   }
 }
 
-
-/* img{
+img{
   cursor: pointer;
-  width: 350px;
-  height: 350px;
-  margin: 25px;
-  padding: 25px;
-  border: 0.5px solid ;
-  border-radius: 20px;
-}
-#divToRender{
-  display: inline-block;
-  margin-bottom: 25px;
+  cursor: progress;
 }
 
-h2{
+button:hover{
+    cursor: progress;
+}
+h3,h6{
   text-decoration: underline;
-  /* border-bottom: 0.25px dashed; */
+  border-bottom: 0.25px dashed;
+  text-align: center;
+  margin-bottom: 10px;
+}

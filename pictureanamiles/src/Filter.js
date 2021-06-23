@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
-import { Form, DropdownButton, Dropdown } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 // import { Container, CardGroup } from 'react-bootstrap'
 
-export class FilterForm extends Component {
+export class Filter extends Component {
     updateForm = (e) => {
         let filteredArr = []
-        if (e != 'All') {
-            filteredArr = this.props.hornsData.filter(value => {
+        if (e !== 'All') {
+            filteredArr = this.props.HornsData.filter(value => {
                 if (value.horns == e)
                     return value
             })
         } else
-            filteredArr = this.props.hornsData;
+            filteredArr = this.props.HornsData;
         this.props.filterData(filteredArr)
     }
 
@@ -35,13 +35,6 @@ export class FilterForm extends Component {
                             <option value='3'>3</option>
                             <option value='100'>100</option>
                         </Form.Control>
-                        {/* <DropdownButton id="dropdown-basic-button" title="Dropdown button"  onClick={this.updateHornsNum}>
-                            <Dropdown.Item value='All'>All</Dropdown.Item>
-                            <Dropdown.Item value='1 '>1</Dropdown.Item>
-                            <Dropdown.Item value='2'>2</Dropdown.Item>
-                             <Dropdown.Item value='3'>3</Dropdown.Item>
-                              <Dropdown.Item value='100'>100</Dropdown.Item>
-                        </DropdownButton> */}
                     </Form.Group>
                 </Form>
             </>
@@ -49,4 +42,4 @@ export class FilterForm extends Component {
     }
 }
 
-export default FilterForm
+export default Filter

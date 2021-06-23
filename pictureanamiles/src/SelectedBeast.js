@@ -5,19 +5,19 @@ export class SelectedBeast extends Component {
     render() {
         return (
             <>
-                <Modal show={this.props.showdata}  >
+                <Modal show={this.props.ShowData}  >
                     <Modal.Header>
-                        <Modal.Title style={{ alignItems: 'center' }}>{this.props.modaldata.title}</Modal.Title>
+                        <Modal.Title style={{ alignItems: 'center' }}>{this.props.ModalData.title}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
 
                         <Card style={{ width: "80%", height: "100%", marginLeft: "7vh" }} bg={'pink'}>
                             <Card.Img width={200}
-                                height={280} src={this.props.modaldata.img_url} alt={this.props.title} />
+                                height={280} src={this.props.ModalData.img_url} alt={this.props.title} />
                             <Card.Body>
 
                                 <Card.Text>
-                                    {this.props.modaldata.description}
+                                    {this.props.ModalData.description}
                                 </Card.Text>
                             </Card.Body>
 
